@@ -7,6 +7,7 @@
     <title>We create unforgettable experiences - Techland</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    
 </head>
 <body>
 
@@ -74,22 +75,42 @@
             </div>
             
         </section>
+
         <section class="loginsection">
             <div class="linediv">
-                <h1>LOGIN:</h1>
+                <h1>LOGIN AREA</h1>
                 <div class="line"></div>
             </div>
 
-            <div class="login">
-                <input type="email" name="" id="">
-                <input type="password" name="" id="">
-                <button type="submit">Login</button>
+            <div class="login-box">
+                <span class="error-login" id="error-login">Usuário não encontrado, tente usar o seguinte e-mail: eve.holt@reqres.in</span>
+                <form class="form-login" id="form-login" onsubmit="login(event)">
+                    
+                    <div class="login-itens">
+                        <p>E-mail:</p>
+                        <input type="email" class="email-input" placeholder="email@email.com" id="email-input" minlength="3" required>
+                        <p>Password:</p>
+                        <input type="password" class="password-input" id="password-input" minlength="6" required> 
+                    </div>
+                    <button type="submit" class="submit-btn">LOGIN</button>
+                </form>
+                <button class="logout-button" id="logout-button" onclick="logout()">LOGOUT</button>
             </div>
+            <!-- <input type="search" name="" id="searchbar" class="searchbar"> -->
+            <form class="searchtext" id="searchtext" onsubmit="validate(event)">
+                <input name="" id="searchbar" class="searchbar" cols="30" rows="10" placeholder="Digite um nome de um personagem de Star Wars:" required></input>
+                
+                <div class="conteudo-nome" conteudo-nome></div>
+                <p class="search-error" id="search-error">Não foi encontrado nenhum personagem com esse nome!</p>
+                <template resultado-pesquisa>
+                        
+                        <label class="label-nome">Nome: </label>
+                        <p class="texto-nome"></p>
+                </template>
+                
+                <button type="submit" class="botao-consulta">CONSULTAR</button>
 
+            </form>
+            
         </section>
     </div>
-
-    
-
-</body>
-</html>

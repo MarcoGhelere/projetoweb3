@@ -235,6 +235,149 @@ nav a:hover{
     letter-spacing: 5px;
 }
 
+.login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+}
+
+.error-login {
+    color: red;
+    font: 500 1rem 'Rubik', sans-serif;
+    font-size: 20px;
+    align-self: center;
+    display: none;
+}
+
+.login-box p{
+    font: 500 1rem 'Rubik', sans-serif;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+    /* background-color: red; */
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.password-input{
+    margin-bottom: 20px;
+}
+
+input {
+    font: 400 1rem 'Rubik', sans-serif;
+    font-size: 16px;
+    color: black;
+    outline: 0;
+    border: 0;
+    /* border-bottom: 0.05rem solid black; */
+    padding: 10px 15px;
+}
+
+.submit-btn{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: green;
+    color: white;
+    align-self: center;
+}
+
+.submit-btn:hover{
+    background-color: rgb(90, 146, 90);
+}
+
+.login-itens {
+    /* background-color: blue; */
+}
+
+.searchtext {
+    display: none;
+    flex-direction: column;
+
+    /* width: 100%; */
+}
+.search-error {
+    color: red;
+    font: 500 1rem 'Rubik', sans-serif;
+    font-size: 20px;
+    align-self: center;
+    display: none;
+    margin-bottom: 15px;
+    
+}
+
+.searchbar {
+    width: 80%;
+    margin: 40px;
+    align-self: center;
+}
+
+.botao-consulta {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: green;
+    color: white;
+    align-self: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.logout-button {
+    display: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: red;
+    color: white;
+    align-self: center;
+    font-weight: bold;
+}
+
+.turnvisible {
+    display: flex;
+}
+
+.turninvisible{
+    display: none;
+}
+
+.conteudo-nome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom:20px;
+}
+
+.resultados-linha {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.label-nome {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.texto-nome {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 1200px) {
     .desktopheader{
         display: none;
