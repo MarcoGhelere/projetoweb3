@@ -13,7 +13,7 @@ var corsOptions = {
     credentials: true
   }
 app.use(cors(corsOptions));
-app.use(express.json({ limit: "10mb" }));
+app.use(express.json());
 
 dotenv.config();
 
@@ -24,20 +24,5 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 app.use("/", router);
 //app.use(express.static(path.join(__dirname + "/public")));
-
-// Codigo abaixo foi usado para teste, ignorar...
-// app.get('/', (req, res) => {
-//     res.status(200).json('deu certo')
-// })
-
-// app.get('/beans', (req, res) => {
-//     res.status(200).json('BEANSSS!')
-// })
-
-// app.get('/login',(req, res) => {
-//     var token = 'token1';
-
-//     res.status(200).json({data:{token}})
-// })
 
 app.listen(3000);

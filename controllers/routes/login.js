@@ -58,19 +58,14 @@ function tokenCheck(req, res, next) {
         return res.status(400).json({ error: "User is not authenticated" });
     }
 
-    jwt.verify(token, process.env.JWT_SECRET_KEY, function (err, decoded) {
-        if (err) return res.status(400).json({ error: "User is not authenticated" });
+    jwt.verify(token, process.env.JWT_SECRET_KEY, (error) => {
+        if (error) {
+            return res.status(400).json({ error: "User is not authenticated" });
+        }
 
         req.token = token;
-        req.userId = decoded.id;
         next();
     });
 }
-
-router.get("/userdata", tokenCheck, async (req, res) => {
-    const existentUser = await userdata.findOne({ _id: req.userId }).exec();
-
-    res.status(200).json({name: existentUser.name});
-});
 
 module.exports = router;
