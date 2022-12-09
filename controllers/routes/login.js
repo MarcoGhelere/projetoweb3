@@ -52,8 +52,8 @@ router.post("/login", async (req, res) => {
     res.status(200).json({ name: existentUser.name, token });
 })
 
-function validateToken(req, res, next) {
-    const token = req.headers.auth;
+function tokenCheck(req, res, next) {
+    const token = req.headers.token;
     if (!token) {
         return res.status(400).json({ error: "User is not authenticated" });
     }
@@ -67,7 +67,7 @@ function validateToken(req, res, next) {
     });
 }
 
-router.get("/userdata", validateToken, async (req, res) => {
+router.get("/userdata", tokenCheck, async (req, res) => {
     const existentUser = await userdata.findOne({ _id: req.userId }).exec();
 
     res.status(200).json({name: existentUser.name});
