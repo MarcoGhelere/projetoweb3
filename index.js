@@ -25,4 +25,4 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 app.use("/", router);
 //app.use(express.static(path.join(__dirname + "/public")));
 
-app.listen(3000);
+app.listen(process.env.PORT||3000);
