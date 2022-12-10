@@ -43,12 +43,7 @@ router.post("/", tokenCheck, upload.single("charPic"), (req, res) => {
     (error) => {
         console.error('Error:', error);
     }
-    );
-
-    
-    
-
-        
+    );  
 });
 
 module.exports = router;
