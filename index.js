@@ -17,7 +17,7 @@ app.use(express.json());
 
 dotenv.config();
 
-const mongoDB = process.env.MONGO_ATLAS_URL;
+const mongoDB = `${process.env.MONGO_ATLAS_URL}`;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
